@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events1</title>
+    <style>
+        #image{
+            width: 200px;
+            height: 350px;
+        }
+
+        #changeButton{
+            width: 40px;
+            height: 30px;
+            color: black;
+            position: absolute;
+            top: 200px;
+            left: 660px;
+            background-color: brown;
+            color: white;
+            border-radius: 5px;
+            
+        }
+    </style>
+   
+</head>
+
+<body style="text-align: center;">
+    <h1>Bulub On & Of Project</h1>
+    <img id="image" src="https://i.postimg.cc/6QyTynzr/bulb-off.png">
+    <br>
+    
+    <button id="changeButton" onclick="changeImage()">OFF</button>
+    
+    <script>
+        function changeImage() {
+            var bulbimage = document.getElementById("image");
+            var btn = document.getElementById("changeButton");
+    
+          
+            if (bulbimage.src.endsWith("https://i.postimg.cc/6QyTynzr/bulb-off.png")) {
+               
+                bulbimage.src = "https://i.postimg.cc/KjK1wL3c/bulb-oon.png";
+                btn.innerHTML = "ON";
+            } else {
+            
+                bulbimage.src = "https://i.postimg.cc/6QyTynzr/bulb-off.png";
+                btn.innerHTML = "OFF";
+            }
+        }
+    </script>
+    
+    </body>
+
+</html>
